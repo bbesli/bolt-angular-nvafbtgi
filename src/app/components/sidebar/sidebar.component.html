@@ -1,0 +1,25 @@
+<div class="sidebar" [class.collapsed]="isCollapsed">
+  <div class="sidebar-header">
+    <h3 *ngIf="!isCollapsed" class="text-white">Dashboard</h3>
+    <button class="toggle-btn" (click)="toggleSidebar()">
+      <i class="bi" [ngClass]="isCollapsed ? 'bi-list' : 'bi-x-lg'"></i>
+    </button>
+  </div>
+  <div class="menu-items">
+    <div *ngFor="let item of menuItems; let i = index">
+      <div class="menu-item" (click)="toggleSubmenu(i)">
+        <i class="bi" [ngClass]="'bi-' + item.icon"></i>
+        <span>{{ item.label }}</span>
+        <span *ngIf="!isCollapsed && item.children && item.children.length > 0" class="ms-auto">
+          <i class="bi" [ngClass]="item.expanded ? 'bi-chevron-down' : 'bi-chevron-right'"></i>
+        </span>
+      </div>
+      <div class="submenu" *ngIf="item.children && item.children.length > 0" [class.expanded]="item.expanded">
+        <div class="menu-item" *ngFor="let child of item.children">
+          <i class="bi" [ngClass]="'bi-' + child.icon"></i>
+          <span>{{ child.label }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

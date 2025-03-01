@@ -1,0 +1,55 @@
+.badge {
+  font-size: 0.65rem;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.dropdown-menu {
+  min-width: 240px;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.dropdown-header {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-divider {
+  margin: 0.25rem 0;
+}
+
+.search-bar .input-group {
+  width: 100%;
+  max-width: 300px;
+}
+
+.search-bar .form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  cursor: pointer;
+}

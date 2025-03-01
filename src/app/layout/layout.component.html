@@ -1,0 +1,9 @@
+<div class="app-container">
+  <app-sidebar [isCollapsed]="sidebarCollapsed" (collapsed)="onSidebarCollapsed($event)"></app-sidebar>
+  <div>
+    <app-topnav [sidebarCollapsed]="sidebarCollapsed"></app-topnav>
+    <div class="main-content" [class.sidebar-collapsed]="sidebarCollapsed">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
